@@ -6,25 +6,29 @@ let basket = [];
 function addItem(item) {
     basket.push(item);
     return true;
-}
-
-function listItems() {
-    basket.forEach(item => {
-        console.log(item);
-    })
     
 }
+addItem ('Kale')
+addItem ('Banana')
+addItem ('Bluberry Muffin')
+console.log (basket);
+console.log ('True:' , addItem('Kale'))
+    
+function listItems(){
+    for (let item  of basket) {
+        console.log(item)
+    }
+}
+listItems();
+
+function empty(){
+    basket=[]
+}
+empty();
+console.log('empty[]:' , basket);
 
 
-
-
-
-
-
-
-
-
-// DO NOT MODIFY
+// DO NOT MODIFY 
 // Used for automated testing
 try {
     module.exports = {
